@@ -1,0 +1,32 @@
+{
+  "name": "andyrum/billingo-api-laravel",
+  "description": "Billingo API Service",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PoOwAa",
+      "email": "raycsucsu@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.0",
+    "illuminate/support": "5.8.*",
+    "voov/billingo-api-connector": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Billingo\\API\\Laravel\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Billingo\\API\\Laravel\\BillingoServiceProvider"
+      ],
+      "aliases": {
+        "Billingo": "Billingo\\API\\Laravel\\BillingoFacade"
+      }
+    }
+  }
+}
